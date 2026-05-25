@@ -287,10 +287,10 @@ const StudentDashboard = () => {
                 <thead>
                   <tr className="border-b border-border/60 text-[10px] font-bold uppercase text-muted-foreground tracking-wider">
                     <th className="pb-3 text-left">Subject</th>
-                    <th className="pb-3 text-left">Exam Type</th>
+                    <th className="pb-3 text-left hidden sm:table-cell">Exam Type</th>
                     <th className="pb-3 text-center">Score</th>
-                    <th className="pb-3 text-center">Max Marks</th>
-                    <th className="pb-3 text-center">Percentage</th>
+                    <th className="pb-3 text-center hidden md:table-cell">Max Marks</th>
+                    <th className="pb-3 text-center hidden sm:table-cell">Percentage</th>
                     <th className="pb-3 text-right">Grade</th>
                   </tr>
                 </thead>
@@ -310,10 +310,10 @@ const StudentDashboard = () => {
                     return (
                       <tr key={i} className="hover:bg-secondary/15 transition-all">
                         <td className="py-3.5 font-bold text-sm text-foreground">{m.subject_name || m.subject_code}</td>
-                        <td className="py-3.5 text-xs text-muted-foreground uppercase font-bold tracking-wider">{m.exam_type}</td>
+                        <td className="py-3.5 text-xs text-muted-foreground uppercase font-bold tracking-wider hidden sm:table-cell">{m.exam_type}</td>
                         <td className="py-3.5 text-sm font-mono text-center font-bold text-foreground">{m.score}</td>
-                        <td className="py-3.5 text-sm font-mono text-center text-muted-foreground">{m.max_score}</td>
-                        <td className="py-3.5">
+                        <td className="py-3.5 text-sm font-mono text-center text-muted-foreground hidden md:table-cell">{m.max_score}</td>
+                        <td className="py-3.5 hidden sm:table-cell">
                           <div className="flex items-center justify-center gap-2.5">
                             <div className="w-24 h-1.5 bg-secondary/50 rounded-full overflow-hidden shrink-0 hidden sm:block">
                               <div 
